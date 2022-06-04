@@ -10,11 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Edify">
         <activity
-            android:name=".OnboardingActivity"
+            android:name=".OnBoardingActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity android:name=".CategorySelectionActivity"
+            android:exported="false"/>
+        <activity android:name=".StudentFormActivity"
+            android:exported="false"/>
+        <activity android:name=".TeacherFormActivity"
+            android:exported="false"/>
         <activity
             android:name=".IntroductoryActivity"
             android:exported="true">

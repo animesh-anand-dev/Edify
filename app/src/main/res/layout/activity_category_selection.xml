@@ -11,7 +11,7 @@
         android:id="@+id/category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
         android:gravity="center_horizontal"
         android:text="@string/category"
         android:textColor="@color/black"
@@ -20,7 +20,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
@@ -29,72 +28,70 @@
         android:layout_height="200dp"
         android:clickable="true"
         app:cardCornerRadius="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/student"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/category"
-        app:layout_constraintVertical_bias="0.531"
-        android:layout_marginRight="20dp">
+        app:layout_constraintVertical_bias="0.6">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:padding="5dp"
+                    android:src="@drawable/teacher">
+                </ImageView>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:src="@drawable/teacher">
-
-            </ImageView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center_horizontal"
-                android:text="TEACHER"
-                android:paddingTop="10dp">
-
-            </TextView>
-        </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:text="TEACHER"
+                    android:layout_marginTop="2dp"
+                    android:textSize="25sp">
+                </TextView>
+            </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-
     <androidx.cardview.widget.CardView
+        android:id="@+id/student"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:clickable="true"
-        android:id="@+id/student"
         app:cardCornerRadius="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/teacher"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/category"
-        app:layout_constraintVertical_bias="0.531"
-        android:layout_marginLeft="20dp">
+        app:layout_constraintVertical_bias="0.766">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:src="@drawable/student">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:padding="5dp"
+                    android:src="@drawable/student">
+                </ImageView>
 
-            </ImageView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center_horizontal"
-                android:paddingTop="10dp"
-                android:text="STUDENT">
-
-            </TextView>
-        </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:textSize="25sp"
+                    android:text="STUDENT">
+                </TextView>
+            </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 

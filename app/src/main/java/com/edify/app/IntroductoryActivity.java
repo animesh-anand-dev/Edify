@@ -27,6 +27,6 @@ public class IntroductoryActivity extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(getApplicationContext(), OnBoardingActivity.class));
             }
-        }, 3000);
+        }, 4000);
     }
 }
