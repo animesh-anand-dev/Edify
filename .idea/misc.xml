@@ -6,6 +6,8 @@
         <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_category_selection.xml" value="0.2" />
         <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_introductory.xml" value="0.22" />
         <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_onboarding.xml" value="0.2" />
+        <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_otp_verify.xml" value="0.25" />
+        <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_phone_authentication.xml" value="0.22" />
       </map>
     </option>
   </component>
