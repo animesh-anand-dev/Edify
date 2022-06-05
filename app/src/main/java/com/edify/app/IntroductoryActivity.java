@@ -26,7 +26,10 @@ public class IntroductoryActivity extends AppCompatActivity {
         new Timer().schedule(new TimerTask(){
             public void run() {
                 startActivity(new Intent(getApplicationContext(), OnBoardingActivity.class));
+                finish();
             }
         }, 4000);
+
+
     }
 }
