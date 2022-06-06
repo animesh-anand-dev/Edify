@@ -20,17 +20,15 @@ public class CategorySelectionActivity extends AppCompatActivity {
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CategorySelectionActivity.this, PhoneAuthenticationActivity.class);
+                Intent intent = new Intent(CategorySelectionActivity.this, TeacherFormActivity.class);
                 startActivity(intent);
-
             }
         });
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CategorySelectionActivity.this, OtpVerifyActivity.class);
+                Intent intent = new Intent(CategorySelectionActivity.this, StudentFormActivity.class);
                 startActivity(intent);
-
             }
         });
     }

@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +43,7 @@ public class PhoneAuthenticationActivity extends AppCompatActivity {
     private String mVerificationId;
     private PhoneAuthProvider.ForceResendingToken mResendToken;
     private String phone;
+    private ProgressBar mProgressBar;
 
 
     @Override
@@ -51,8 +53,8 @@ public class PhoneAuthenticationActivity extends AppCompatActivity {
 
         phone_num = (TextInputEditText) findViewById(R.id.phone_input);
         otp_send = (Button) findViewById(R.id.get_otp);
-        resend = (TextView) findViewById(R.id.resend_btn);
         otp = (TextInputEditText) findViewById(R.id.otp_input);
+        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();
@@ -92,9 +94,12 @@ public class PhoneAuthenticationActivity extends AppCompatActivity {
                                     .build();
                     PhoneAuthProvider.verifyPhoneNumber(options);
                     Log.d(TAG, "OTP sending process starts");
+                    mProgressBar.setVisibility(View.VISIBLE);
                 }
             }
         });
+
+
 
         mCallBacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
@@ -142,9 +147,12 @@ public class PhoneAuthenticationActivity extends AppCompatActivity {
                 otpIntent.putExtra("AuthCredentials", mVerificationId);
                 otpIntent.putExtra("PhoneNumber", phone);
                 startActivity(otpIntent);
+                finish();
             }
         };
     }
+
+
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)

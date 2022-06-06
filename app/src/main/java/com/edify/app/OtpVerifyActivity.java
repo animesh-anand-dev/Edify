@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ public class OtpVerifyActivity extends AppCompatActivity {
     private TextInputEditText otp;
     private String mAuthVerificationId, phoneNum, deviceToken;
     private FirebaseUser mCurrentUser;
+    private ProgressBar mProgressBarOtp;
 
 
     @Override
@@ -43,9 +45,10 @@ public class OtpVerifyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_verify);
 
-       //resend = (TextView) findViewById(R.id.resend_btn);
+       resend = (TextView) findViewById(R.id.resend_btn);
         otp = (TextInputEditText) findViewById(R.id.otp_input);
         otp_verify = (Button) findViewById(R.id.otp_verify);
+        mProgressBarOtp = (ProgressBar) findViewById(R.id.progressBarOtp);
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();
 
@@ -57,12 +60,20 @@ public class OtpVerifyActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String input_otp = otp.getText().toString();
 
-                if (TextUtils.isEmpty(input_otp)){
+                if (TextUtils.isEmpty(input_otp) || input_otp.length()<6){
                     Toast.makeText(getApplicationContext(), "Please enter correct OTP", Toast.LENGTH_LONG).show();
                 }else {
                     PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mAuthVerificationId, input_otp);
                     signInWithPhoneAuthCredential(credential);
+                    mProgressBarOtp.setVisibility(View.VISIBLE);
                 }
+            }
+        });
+
+        resend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Resend not available at this time",Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -103,6 +114,9 @@ public class OtpVerifyActivity extends AppCompatActivity {
                             // The verification code entered was invalid
                             Toast.makeText(this, "Invalid OTP", Toast.LENGTH_SHORT).show();
                         }
+                    } else
+                    {
+                        Toast.makeText(this, "Invalid OTP", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
