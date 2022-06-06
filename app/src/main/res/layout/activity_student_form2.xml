@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentFormActivity"
-    >
+    tools:context=".StudentForm2Activity">
+
+
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center_horizontal"
-        android:text="Personal Details"
         android:paddingTop="10dp"
+        android:text="Personal Details"
         android:textColor="@color/logo_secondary"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -25,175 +26,152 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name_layout"
+        android:id="@+id/address_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="Name"
-        app:boxStrokeColor="@color/secondary_variant"
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
+        android:hint="Address"
         app:helperText="Required*"
         app:helperTextTextColor="@color/secondary_variant"
         app:hintTextColor="@color/secondary_variant"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127"
-        app:startIconDrawable="@drawable/name">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/mobile_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Mobile No"
-        app:boxStrokeColor="@color/secondary_variant"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
-        app:helperText="Required*"
-        app:startIconDrawable="@drawable/phone"
-        app:helperTextTextColor="@color/secondary_variant"
-        app:hintTextColor="@color/secondary_variant"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_layout"
-        app:layout_constraintVertical_bias="0.045">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/mobile_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:maxLength="10" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="E-mail"
-        app:boxStrokeColor="@color/secondary_variant"
-        app:helperText="Required*"
-        app:startIconDrawable="@drawable/mail"
-        app:helperTextTextColor="@color/secondary_variant"
-        app:hintTextColor="@color/secondary_variant"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobile_layout"
-        app:layout_constraintVertical_bias="0.057">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dob_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Date of Birth"
-        app:boxStrokeColor="@color/secondary_variant"
-        app:hintTextColor="@color/secondary_variant"
-        app:helperTextTextColor="@color/secondary_variant"
-        app:helperText="Required*"
-        app:startIconDrawable="@drawable/date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_layout"
-        app:layout_constraintVertical_bias="0.057">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:inputType="date"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/gender"
-        android:layout_width="300dp"
-        android:layout_height="25dp"
-        android:paddingLeft="10dp"
-        android:text="Gender:-"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email_layout"
-        app:layout_constraintVertical_bias="0.323" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:checkedButton="@+id/radio_button_1"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        app:boxStrokeColor="@color/secondary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gender"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0"
+        app:startIconDrawable="@drawable/house">
 
-        <RadioButton
-            android:id="@+id/male_button"
-            android:layout_width="134dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address_input"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="25dp"
-            android:text="Male" />
-
-        <RadioButton
-            android:id="@+id/female_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Female" />
-    </RadioGroup>
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pincode_layout"
+        android:id="@+id/class_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="Pincode"
-        app:counterEnabled="true"
+        android:hint="Class"
         app:boxStrokeColor="@color/secondary_variant"
-        app:counterMaxLength="6"
         app:helperText="Required*"
-        app:startIconDrawable="@drawable/pincode"
         app:helperTextTextColor="@color/secondary_variant"
+        app:hintTextColor="@color/secondary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.073">
+        app:layout_constraintTop_toBottomOf="@+id/address_layout"
+        app:layout_constraintVertical_bias="0.023"
+        app:startIconDrawable="@drawable/std">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pincode_input"
+            android:id="@+id/class_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:maxLength="6" />
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/school_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="School"
+        app:boxStrokeColor="@color/secondary_variant"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/secondary_variant"
+        app:hintTextColor="@color/secondary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/class_layout"
+        app:layout_constraintVertical_bias="0.037"
+        app:startIconDrawable="@drawable/sch">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/school_input"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/board_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Board"
+        app:boxStrokeColor="@color/secondary_variant"
+        app:helperText="Hint:-CBSE"
+        app:helperTextTextColor="@color/secondary_variant"
+        app:hintTextColor="@color/secondary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/school_layout"
+        app:layout_constraintVertical_bias="0.055"
+        app:startIconDrawable="@drawable/degree">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/board_input"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/percentage_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Percentage(%) in previous class"
+        app:boxStrokeColor="@color/secondary_variant"
+        app:startIconDrawable="@drawable/percentage"
+        app:helperText="Hint:-75"
+        app:helperTextTextColor="@color/secondary_variant"
+        app:hintTextColor="@color/secondary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/board_layout"
+        app:layout_constraintVertical_bias="0.07">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/percentage_input"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sub_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Subjects want to study?"
+        app:startIconDrawable="@drawable/subject"
+        app:boxStrokeColor="@color/secondary_variant"
+        app:helperText="Hint:-English,Maths,Science"
+        app:helperTextTextColor="@color/secondary_variant"
+        app:hintTextColor="@color/secondary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentage_layout"
+        app:layout_constraintVertical_bias="0.07">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sub_input"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
@@ -204,7 +182,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pincode_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/sub_layout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

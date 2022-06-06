@@ -7,18 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class TeacherFormActivity extends AppCompatActivity {
+public class StudentForm2Activity extends AppCompatActivity {
     Button next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teacher_form);
+        setContentView(R.layout.activity_student_form2);
         next =(Button) findViewById(R.id.next);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i =new Intent(TeacherFormActivity.this, TeacherForm2Activity.class);
+                Intent i =new Intent(StudentForm2Activity.this, StudentForm3Activity.class);
                 startActivity(i);
             }
         });
