@@ -7,7 +7,7 @@
     tools:context=".TeacherFormActivity">
 
     <TextView
-        android:id="@+id/details"
+        android:id="@+id/teach_form_title_1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center_horizontal"
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name_layout"
+        android:id="@+id/teach_name_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -39,18 +39,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/details"
-        app:layout_constraintVertical_bias="0.127"
+        app:layout_constraintTop_toBottomOf="@+id/teach_form_title_1"
+        app:layout_constraintVertical_bias="0.043"
         app:startIconDrawable="@drawable/name">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name_input"
+            android:id="@+id/teach_name_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/mobile_layout"
+        android:id="@+id/teach_mobile_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -65,11 +66,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_layout"
+        app:layout_constraintTop_toBottomOf="@+id/teach_name_layout"
         app:layout_constraintVertical_bias="0.045">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/mobile_input"
+            android:id="@+id/teach_mobile_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -77,7 +78,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email_layout"
+        android:id="@+id/teach_email_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -91,17 +92,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobile_layout"
+        app:layout_constraintTop_toBottomOf="@+id/teach_mobile_layout"
         app:layout_constraintVertical_bias="0.057">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_input"
+            android:id="@+id/teach_email_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dob_layout"
+        android:id="@+id/teach_dob_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -115,16 +116,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_layout"
+        app:layout_constraintTop_toBottomOf="@+id/teach_email_layout"
         app:layout_constraintVertical_bias="0.057">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/teach_dob_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="date"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/gender"
+        android:id="@+id/teach_gender"
         android:layout_width="300dp"
         android:layout_height="25dp"
         android:paddingLeft="10dp"
@@ -134,11 +136,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email_layout"
+        app:layout_constraintTop_toBottomOf="@id/teach_email_layout"
         app:layout_constraintVertical_bias="0.323" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/teach_method_input"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:checkedButton="@+id/radio_button_1"
@@ -149,25 +151,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gender"
+        app:layout_constraintTop_toBottomOf="@id/teach_gender"
         app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
-            android:id="@+id/male_button"
+            android:id="@+id/teach_male_button"
             android:layout_width="134dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="25dp"
             android:text="Male" />
 
         <RadioButton
-            android:id="@+id/female_button"
+            android:id="@+id/teach_female_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female" />
     </RadioGroup>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pincode_layout"
+        android:id="@+id/teach_pincode_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -182,11 +184,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/teach_method_input"
         app:layout_constraintVertical_bias="0.073">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pincode_input"
+            android:id="@+id/teach_pincode_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -194,7 +196,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/teach_form2_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
@@ -203,7 +205,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pincode_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/teach_pincode_layout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

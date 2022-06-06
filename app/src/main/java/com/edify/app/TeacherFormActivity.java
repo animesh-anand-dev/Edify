@@ -8,19 +8,12 @@ import android.view.View;
 import android.widget.Button;
 
 public class TeacherFormActivity extends AppCompatActivity {
-    Button next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_form);
-        next =(Button) findViewById(R.id.next);
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i =new Intent(TeacherFormActivity.this, TeacherForm2Activity.class);
-                startActivity(i);
-            }
-        });
+
+
     }
 }

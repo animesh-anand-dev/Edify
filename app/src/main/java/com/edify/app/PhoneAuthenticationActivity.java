@@ -51,10 +51,10 @@ public class PhoneAuthenticationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_authentication);
 
-        phone_num = (TextInputEditText) findViewById(R.id.phone_input);
-        otp_send = (Button) findViewById(R.id.get_otp);
-        otp = (TextInputEditText) findViewById(R.id.otp_input);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        phone_num = (TextInputEditText) findViewById(R.id.phone_verify_input);
+        otp_send = (Button) findViewById(R.id.phone_verify_get_otp);
+        otp = (TextInputEditText) findViewById(R.id.otp_verify_input);
+        mProgressBar = (ProgressBar) findViewById(R.id.phone_verify_progressBar);
 
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();

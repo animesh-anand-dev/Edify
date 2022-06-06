@@ -7,7 +7,7 @@
     tools:context=".PhoneAuthenticationActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/phone_verify_image"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:src="@drawable/mobile_illustration"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.033" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/phone_verify_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -30,11 +30,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/phone_verify_image"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/phone_verify_subTitle"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -46,11 +46,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/phone_verify_title"
         app:layout_constraintVertical_bias="0.04" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout"
+        android:id="@+id/phone_verify_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -68,14 +68,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/phone_verify_subTitle"
         app:layout_constraintVertical_bias="0.207"
         app:prefixText="+91"
         app:prefixTextColor="@color/secondary_variant"
         app:startIconDrawable="@drawable/phone">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phone_input"
+            android:id="@+id/phone_verify_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -84,7 +84,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/get_otp"
+        android:id="@+id/phone_verify_get_otp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/secondary_variant"
@@ -94,11 +94,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/phone_verify_layout"
         app:layout_constraintVertical_bias="0.328" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/phone_verify_progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

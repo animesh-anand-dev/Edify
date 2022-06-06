@@ -7,14 +7,13 @@
     tools:context=".StudentForm2Activity">
 
 
-
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/std_form_title_2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center_horizontal"
         android:paddingTop="10dp"
-        android:text="Personal Details"
+        android:text="Academic Details"
         android:textColor="@color/logo_secondary"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -26,7 +25,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/address_layout"
+        android:id="@+id/std_address_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -38,19 +37,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/std_form_title_2"
+        app:layout_constraintVertical_bias="0.024"
         app:startIconDrawable="@drawable/house">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/address_input"
+            android:id="@+id/std_address_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/class_layout"
+        android:id="@+id/std_class_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -63,19 +63,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address_layout"
+        app:layout_constraintTop_toBottomOf="@+id/std_address_layout"
         app:layout_constraintVertical_bias="0.023"
         app:startIconDrawable="@drawable/std">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/class_input"
+            android:id="@+id/std_class_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/school_layout"
+        android:id="@+id/std_school_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -88,19 +88,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/class_layout"
+        app:layout_constraintTop_toBottomOf="@+id/std_class_layout"
         app:layout_constraintVertical_bias="0.037"
         app:startIconDrawable="@drawable/sch">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/school_input"
+            android:id="@+id/std_school_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/board_layout"
+        android:id="@+id/std_board_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -113,19 +113,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/school_layout"
+        app:layout_constraintTop_toBottomOf="@+id/std_school_layout"
         app:layout_constraintVertical_bias="0.055"
         app:startIconDrawable="@drawable/degree">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/board_input"
+            android:id="@+id/std_board_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/percentage_layout"
+        android:id="@+id/std_percentage_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -139,17 +139,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/board_layout"
+        app:layout_constraintTop_toBottomOf="@+id/std_board_layout"
         app:layout_constraintVertical_bias="0.07">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/percentage_input"
+            android:id="@+id/std_percentage_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sub_layout"
+        android:id="@+id/std_sub_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -163,17 +163,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/percentage_layout"
+        app:layout_constraintTop_toBottomOf="@+id/std_percentage_layout"
         app:layout_constraintVertical_bias="0.07">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/sub_input"
+            android:id="@+id/std_sub_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
     <Button
-        android:id="@+id/next"
+        android:id="@+id/std_form2_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
@@ -182,7 +182,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sub_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/std_sub_layout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

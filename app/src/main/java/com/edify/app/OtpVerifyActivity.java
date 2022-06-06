@@ -1,6 +1,5 @@
 package com.edify.app;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,11 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.FirebaseException;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
@@ -45,10 +40,10 @@ public class OtpVerifyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_verify);
 
-       resend = (TextView) findViewById(R.id.resend_btn);
-        otp = (TextInputEditText) findViewById(R.id.otp_input);
-        otp_verify = (Button) findViewById(R.id.otp_verify);
-        mProgressBarOtp = (ProgressBar) findViewById(R.id.progressBarOtp);
+       resend = (TextView) findViewById(R.id.otp_verify_resend);
+        otp = (TextInputEditText) findViewById(R.id.otp_verify_input);
+        otp_verify = (Button) findViewById(R.id.otp_verify_button);
+        mProgressBarOtp = (ProgressBar) findViewById(R.id.otp_verify_progressBar);
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();
 

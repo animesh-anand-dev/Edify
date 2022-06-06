@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StudentForm3Activity">
+
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/std_form_title_3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center_horizontal"
         android:paddingTop="10dp"
-        android:text="Personal Details"
+        android:text="Availability Details"
         android:textColor="@color/logo_secondary"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -23,7 +24,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/hours_layout"
+        android:id="@+id/std_hours_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:boxStrokeColor="@color/secondary_variant"
         android:layout_width="300dp"
@@ -36,19 +37,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/std_form_title_3"
         app:layout_constraintVertical_bias="0.063"
         app:startIconDrawable="@drawable/hours">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/hours_input"
+            android:id="@+id/std_hours_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/days_layout"
+        android:id="@+id/std_days_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:boxStrokeColor="@color/secondary_variant"
         android:layout_width="300dp"
@@ -61,18 +62,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hours_layout"
+        app:layout_constraintTop_toBottomOf="@+id/std_hours_layout"
         app:layout_constraintVertical_bias="0.0"
         app:startIconDrawable="@drawable/calendar">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/days_input"
+            android:id="@+id/std_days_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/no_days_layout"
+        android:id="@+id/std_no_days_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -84,19 +85,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/days_layout"
+        app:layout_constraintTop_toBottomOf="@+id/std_days_layout"
         app:layout_constraintVertical_bias="0.0"
         app:startIconDrawable="@drawable/number">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/no_days_input"
+            android:id="@+id/std_no_days_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/preference"
+        android:id="@+id/std_time_preference"
         android:layout_width="300dp"
         android:layout_height="25dp"
         android:paddingLeft="10dp"
@@ -105,66 +106,68 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/no_days_layout"
+        app:layout_constraintTop_toBottomOf="@+id/std_no_days_layout"
         app:layout_constraintVertical_bias="0.053" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/from_layout"
+        android:id="@+id/std_time_preference_from_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/secondary_variant"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:hint="From:-"
+        android:hint="From"
+        app:boxStrokeColor="@color/secondary_variant"
         app:helperTextTextColor="@color/secondary_variant"
         app:hintTextColor="@color/secondary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/preference"
+        app:layout_constraintTop_toBottomOf="@+id/std_time_preference"
         app:layout_constraintVertical_bias="0.0"
-        >
+        app:startIconDrawable="@drawable/hours">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/from"
+            android:id="@+id/std_time_from"
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:inputType="time" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/to_layout"
+        android:id="@+id/std_time_preference_to_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:hint="To:-"
+        android:hint="To"
+        app:boxStrokeColor="@color/secondary_variant"
         app:hintTextColor="@color/secondary_variant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
-        app:boxStrokeColor="@color/secondary_variant"
-        app:layout_constraintStart_toEndOf="@+id/from_layout"
-        app:layout_constraintTop_toBottomOf="@+id/preference"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toEndOf="@+id/std_time_preference_from_layout"
+        app:layout_constraintTop_toBottomOf="@+id/std_time_preference"
+        app:layout_constraintVertical_bias="0.0"
+        app:startIconDrawable="@drawable/hours">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/to"
-            android:layout_width="125dp"
-            android:layout_height="wrap_content"
-            android:inputType="time" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/std_time_to"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:inputType="time" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/stu_form_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SUBMIT"
-        android:textStyle="bold"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/to_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/std_time_preference_to_layout"
+        app:layout_constraintVertical_bias="0.188" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

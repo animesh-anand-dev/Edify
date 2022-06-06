@@ -7,7 +7,7 @@
     tools:context=".OtpVerifyActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/otp_verify_image"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/otp_illustration"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.074" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/otp_verify_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -30,11 +30,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/otp_verify_image"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/otp_verify_subTitle"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -46,11 +46,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/otp_verify_title"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/otp_verify_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -65,13 +65,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/otp_verify_subTitle"
         app:layout_constraintVertical_bias="0.131"
         app:startIconDrawable="@drawable/lock"
         app:startIconTint="@color/secondary_variant">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/otp_input"
+            android:id="@+id/otp_verify_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberPassword" />
@@ -79,20 +79,20 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tv3"
+        android:id="@+id/otp_verify_resend_desc"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Didn't recieved the verification OTP ? "
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/resend_btn"
+        app:layout_constraintEnd_toStartOf="@+id/otp_verify_resend"
         app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/otp_verify_layout"
         app:layout_constraintVertical_bias="0.148" />
 
     <TextView
-        android:id="@+id/resend_btn"
+        android:id="@+id/otp_verify_resend"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="44dp"
@@ -105,12 +105,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toEndOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintStart_toEndOf="@+id/otp_verify_layout"
+        app:layout_constraintTop_toBottomOf="@+id/otp_verify_layout"
         app:layout_constraintVertical_bias="0.172" />
 
     <Button
-        android:id="@+id/otp_verify"
+        android:id="@+id/otp_verify_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/secondary_variant"
@@ -118,11 +118,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv3"
+        app:layout_constraintTop_toBottomOf="@+id/otp_verify_resend_desc"
         app:layout_constraintVertical_bias="0.251" />
 
     <ProgressBar
-        android:id="@+id/progressBarOtp"
+        android:id="@+id/otp_verify_progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

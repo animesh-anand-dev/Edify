@@ -7,12 +7,12 @@
     tools:context=".TeacherForm2Activity">
 
     <TextView
-        android:id="@+id/details2"
+        android:id="@+id/teach_form_title_2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center_horizontal"
-        android:paddingTop="10dp"
-        android:text="Personal Details"
+        android:paddingTop="5dp"
+        android:text="Professional Details"
         android:textColor="@color/logo_secondary"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/address_layout"
+        android:id="@+id/teach_address_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -36,19 +36,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details2"
+        app:layout_constraintTop_toBottomOf="@+id/teach_form_title_2"
         app:layout_constraintVertical_bias="0.0"
         app:startIconDrawable="@drawable/house">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/address_input"
+            android:id="@+id/teach_address_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/subject_layout"
+        android:id="@+id/teach_subject_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -61,19 +61,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/address_layout"
+        app:layout_constraintTop_toBottomOf="@id/teach_address_layout"
         app:layout_constraintVertical_bias="0.013"
         app:startIconDrawable="@drawable/book">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/subject_input"
+            android:id="@+id/teach_subject_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lang_layout"
+        android:id="@+id/teach_lang_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -85,19 +85,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subject_layout"
+        app:layout_constraintTop_toBottomOf="@id/teach_subject_layout"
         app:layout_constraintVertical_bias="0.028"
         app:startIconDrawable="@drawable/language">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/lang_input"
+            android:id="@+id/teach_lang_input"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/qualification_layout"
+        android:id="@+id/teach_qualification_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -109,17 +109,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lang_layout"
+        app:layout_constraintTop_toBottomOf="@+id/teach_lang_layout"
         app:layout_constraintVertical_bias="0.026"
         app:startIconDrawable="@drawable/degree">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/teach_qualification_input"
+            android:inputType="text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/profession_layout"
+        android:id="@+id/teach_profession_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -132,33 +134,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/qualification_layout"
+        app:layout_constraintTop_toBottomOf="@id/teach_qualification_layout"
         app:layout_constraintVertical_bias="0.036"
         app:startIconDrawable="@drawable/profession">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/profession_input"
+            android:id="@+id/teach_profession_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/method"
+        android:id="@+id/teach_method"
         android:layout_width="300dp"
         android:layout_height="25dp"
         android:paddingLeft="10dp"
-        android:text="Method of Teaching:-"
+        android:text="Method of Teaching:"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profession_layout"
+        app:layout_constraintTop_toBottomOf="@id/teach_profession_layout"
         app:layout_constraintVertical_bias="0.046" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/teach_method_input"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:checkedButton="@+id/radio_button_1"
@@ -169,25 +171,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/method"
+        app:layout_constraintTop_toBottomOf="@id/teach_method"
         app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
-            android:id="@+id/private_button"
+            android:id="@+id/teach_offline_button"
             android:layout_width="134dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="25dp"
-            android:text="Private" />
+            android:text="Offline" />
 
         <RadioButton
-            android:id="@+id/online_button"
+            android:id="@+id/teach_online_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Online" />
     </RadioGroup>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/about_layout"
+        android:id="@+id/teach_about_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -200,27 +202,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/method"
-        app:layout_constraintVertical_bias="0.533"
+        app:layout_constraintTop_toBottomOf="@id/teach_method_input"
+        app:layout_constraintVertical_bias="0.102"
         app:startIconDrawable="@drawable/about">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/about_input"
+            android:id="@+id/teach_about_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/teach_form_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SUBMIT"
-        android:textStyle="bold"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/teach_about_layout"
+        app:layout_constraintVertical_bias="0.483" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
