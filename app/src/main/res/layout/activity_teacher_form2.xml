@@ -178,6 +178,7 @@
             android:id="@+id/teach_offline_button"
             android:layout_width="134dp"
             android:layout_height="wrap_content"
+            android:onClick="onMethodOfTeachingButtonClicked"
             android:layout_marginRight="25dp"
             android:text="Offline" />
 
@@ -185,6 +186,8 @@
             android:id="@+id/teach_online_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onMethodOfTeachingButtonClicked"
+
             android:text="Online" />
     </RadioGroup>
 
