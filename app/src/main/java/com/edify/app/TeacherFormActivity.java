@@ -16,6 +16,7 @@ public class TeacherFormActivity extends AppCompatActivity {
     private Button teach_form1_to_form2;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,9 @@ public class TeacherFormActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent teach_to_form2 = new Intent(TeacherFormActivity.this , TeacherForm2Activity.class);
+                teach_to_form2.putExtra("PHONENUMBER", getIntent().getStringExtra("PHONENUMBER"));
+                teach_to_form2.putExtra("UID", getIntent().getStringExtra("UID"));
+                teach_to_form2.putExtra("TOKEN", getIntent().getStringExtra("TOKEN"));
                 teach_to_form2.putExtra("t_name",teach_name.getText().toString());
                 teach_to_form2.putExtra("t_mob",teach_mob.getText().toString());
                 teach_to_form2.putExtra("t_email",teach_email.getText().toString());
