@@ -34,6 +34,9 @@ public class StudentFormActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent toForm2 = new Intent(StudentFormActivity.this,StudentForm2Activity.class);
+                toForm2.putExtra("PHONENUMBER", getIntent().getStringExtra("PHONENUMBER"));
+                toForm2.putExtra("UID", getIntent().getStringExtra("UID"));
+                toForm2.putExtra("TOKEN", getIntent().getStringExtra("TOKEN"));
                 toForm2.putExtra("s_name",std_name.getText().toString());
                 toForm2.putExtra("s_mob",std_mob.getText().toString());
                 toForm2.putExtra("s_email",std_email.getText().toString());

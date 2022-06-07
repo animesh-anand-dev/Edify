@@ -13,6 +13,9 @@ public class StudentForm2Activity extends AppCompatActivity {
 
     private TextInputEditText std_address, std_class, std_school, std_board, std_marks, std_subjects;
     private Button std_form2_to_form3;
+    private String phoneNum;
+    private String uid;
+    private String devicetoken;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,9 @@ public class StudentForm2Activity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent toForm3 = new Intent(StudentForm2Activity.this,StudentForm3Activity.class);
+                toForm3.putExtra("PHONENUMBER", getIntent().getStringExtra("PHONENUMBER"));
+                toForm3.putExtra("UID", getIntent().getStringExtra("UID"));
+                toForm3.putExtra("TOKEN", getIntent().getStringExtra("TOKEN"));
                 toForm3.putExtra("s_name",getIntent().getStringExtra("s_name"));
                 toForm3.putExtra("s_mob",getIntent().getStringExtra("s_mob"));
                 toForm3.putExtra("s_email",getIntent().getStringExtra("s_email"));

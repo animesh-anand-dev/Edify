@@ -93,10 +93,10 @@ public class OtpVerifyActivity extends AppCompatActivity {
                             if (documentSnapshot.exists()) {
                                 sendUserToMain();
                             }else {
-                                Intent intent = new Intent(OtpVerifyActivity.this, MainActivity.class);
-//                                intent.putExtra("PHONENUMBER", phoneNum);
-//                                intent.putExtra("UID", uid);
-//                                intent.putExtra("TOKEN", deviceToken);
+                                Intent intent = new Intent(OtpVerifyActivity.this, CategorySelectionActivity.class);
+                                intent.putExtra("PHONENUMBER", phoneNum);
+                                intent.putExtra("UID", uid);
+                                intent.putExtra("TOKEN", deviceToken);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
