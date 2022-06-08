@@ -8,9 +8,19 @@
         <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_onboarding.xml" value="0.2" />
         <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_otp_verify.xml" value="0.25" />
         <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_phone_authentication.xml" value="0.22" />
+        <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_student_form.xml" value="0.20416666666666666" />
         <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_student_form2.xml" value="0.20416666666666666" />
+        <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_student_nav.xml" value="0.25" />
         <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_teacher_form.xml" value="0.20416666666666666" />
         <entry key="..\:/my project/Edify/app/src/main/res/layout/activity_teacher_form2.xml" value="0.1" />
+        <entry key="..\:/my project/Edify/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/my project/Edify/app/src/main/res/layout/fragment_student_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/my project/Edify/app/src/main/res/layout/fragment_student_sign_out_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/my project/Edify/app/src/main/res/layout/fragment_student_teacher.xml" value="0.20416666666666666" />
+        <entry key="..\:/my project/Edify/app/src/main/res/layout/student_profile.xml" value="0.25" />
+        <entry key="..\:/my project/Edify/app/src/main/res/layout/teacher_profile.xml" value="0.25" />
+        <entry key="..\:/my project/Edify/app/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/my project/Edify/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
