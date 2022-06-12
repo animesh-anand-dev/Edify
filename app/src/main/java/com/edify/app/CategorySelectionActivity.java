@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.edify.app.authentication.PhoneAuthenticationActivity;
+import com.edify.app.student.StudentFormActivity;
 import com.edify.app.teachers.TeacherFormActivity;
 
 public class CategorySelectionActivity extends AppCompatActivity {

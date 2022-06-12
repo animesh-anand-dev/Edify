@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Edify">
         <activity
+            android:name=".Students"
+            android:exported="false" />
+        <activity
             android:name=".TeacherMainActivity"
             android:exported="false"
             android:label="@string/title_activity_teacher_main" />
