@@ -1,4 +1,4 @@
-package com.edify.app;
+package com.edify.app.teachers;
 
 import static android.content.ContentValues.TAG;
 
@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.edify.app.MainActivity;
+import com.edify.app.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
@@ -21,7 +23,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 
 public class TeacherForm2Activity extends AppCompatActivity {
-    private TextInputEditText teach_address , teach_subject , teach_lang , teach_qualification , teach_profession ,teach_about ;
+    private TextInputEditText teach_address , teach_subject , teach_lang , teach_qualification , teach_profession ;
     public String teach_method_teaching;
     private Button teach_form2_to_submit;
     private String teach_phone_num;
@@ -39,7 +41,6 @@ public class TeacherForm2Activity extends AppCompatActivity {
         teach_lang =(TextInputEditText) findViewById(R.id.teach_lang_input);
         teach_qualification =(TextInputEditText) findViewById(R.id.teach_qualification_input);
         teach_profession =(TextInputEditText) findViewById(R.id.teach_profession_input);
-        teach_about =(TextInputEditText) findViewById(R.id.teach_about_input);
         teach_form2_to_submit=(Button) findViewById(R.id.teach_form_submit);
 
         teach_phone_num = getIntent().getStringExtra("PHONENUMBER");
@@ -67,11 +68,10 @@ public class TeacherForm2Activity extends AppCompatActivity {
                 teacher_data.put("teacherLanguage",teach_lang.getText().toString());
                 teacher_data.put("teacherQualification",teach_qualification.getText().toString());
                 teacher_data.put("teacherProfession",teach_profession.getText().toString());
-                teacher_data.put("teacherAbout",teach_about.getText().toString());
 
                 Toast.makeText(getApplicationContext(), "submitted button clicked successfully", Toast.LENGTH_LONG).show();
 
-                db.collection("UsersList").document(uid).collection("teacher").document(teach_phone_num)
+                db.collection("Teachers").document(uid)
                         .set(teacher_data)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

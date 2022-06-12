@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_marginHorizontal="10dp"
+    android:scrollbars="vertical"
+    app:cardCornerRadius="18dp"
+    android:weightSum="3"
+    android:layout_marginTop="5dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/card_teacher_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.088" />
+
+        <TextView
+            android:id="@+id/card_teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teacher Name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintStart_toEndOf="@+id/card_teacher_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.086" />
+
+        <ImageView
+            android:id="@+id/card_teacher_gender_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/sexual"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_icon"
+            app:layout_constraintVertical_bias="0.056" />
+
+        <TextView
+            android:id="@+id/card_teacher_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="144dp"
+            android:text="Gender"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toEndOf="@+id/card_teacher_gender_icon"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_name"
+            app:layout_constraintVertical_bias="0.056" />
+
+        <ImageView
+            android:id="@+id/card_teacher_qualification_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/degree"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_gender_icon"
+            app:layout_constraintVertical_bias="0.034" />
+
+        <TextView
+            android:id="@+id/card_teacher_qualification"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="144dp"
+            android:text="Qualification"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintStart_toEndOf="@+id/card_teacher_qualification_icon"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_gender"
+            app:layout_constraintVertical_bias="0.037" />
+
+        <ImageView
+            android:id="@+id/card_teacher_profession_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/profession"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_qualification_icon"
+            app:layout_constraintVertical_bias="0.072" />
+
+        <TextView
+            android:id="@+id/card_teacher_profession"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="144dp"
+            android:text="Profession"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.206"
+            app:layout_constraintStart_toEndOf="@+id/card_teacher_profession_icon"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_qualification"
+            app:layout_constraintVertical_bias="0.072" />
+
+        <ImageView
+            android:id="@+id/card_teacher_subject_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_subject_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_profession_icon"
+            app:layout_constraintVertical_bias="0.071" />
+
+
+        <TextView
+            android:id="@+id/card_teacher_subject_"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="144dp"
+            android:text="Subject"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.167"
+            app:layout_constraintStart_toEndOf="@+id/card_teacher_subject_icon"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_profession"
+            app:layout_constraintVertical_bias="0.083" />
+
+        <View
+            android:id="@+id/card_teacher_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/card_teacher_sms_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_subject_" />
+
+        <ImageView
+            android:id="@+id/card_teacher_call_button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:foregroundGravity="left"
+            android:src="@drawable/ic_baseline_phone_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_divider"
+            app:layout_constraintVertical_bias="0.466" />
+
+        <ImageView
+            android:id="@+id/card_teacher_sms_button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:foregroundGravity="center"
+            android:src="@drawable/ic_baseline_message_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.119"
+            app:layout_constraintStart_toEndOf="@id/card_teacher_call_button"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_divider"
+            app:layout_constraintVertical_bias="0.466" />
+
+        <ImageView
+            android:id="@+id/card_teacher_email_button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:foregroundGravity="right"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_email_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.659"
+            app:layout_constraintStart_toEndOf="@id/card_teacher_sms_button"
+            app:layout_constraintTop_toBottomOf="@+id/card_teacher_divider"
+            app:layout_constraintVertical_bias="0.466" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,4 +1,4 @@
-package com.edify.app;
+package com.edify.app.onboarding;
 
 public class OnBoardingItem {
     private int image;

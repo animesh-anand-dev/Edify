@@ -1,4 +1,4 @@
-package com.edify.app;
+package com.edify.app.authentication;
 
 import static android.content.ContentValues.TAG;
 
@@ -16,6 +16,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.edify.app.MainActivity;
+import com.edify.app.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -44,6 +46,7 @@ public class PhoneAuthenticationActivity extends AppCompatActivity {
     private PhoneAuthProvider.ForceResendingToken mResendToken;
     private String phone;
     private ProgressBar mProgressBar;
+    private String category;
 
 
     @Override
@@ -55,6 +58,9 @@ public class PhoneAuthenticationActivity extends AppCompatActivity {
         otp_send = (Button) findViewById(R.id.phone_verify_get_otp);
         otp = (TextInputEditText) findViewById(R.id.otp_verify_input);
         mProgressBar = (ProgressBar) findViewById(R.id.phone_verify_progressBar);
+        category = getIntent().getStringExtra("category");
+
+        Toast.makeText(PhoneAuthenticationActivity.this, "You are selected " +category, Toast.LENGTH_SHORT).show();
 
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();
@@ -146,6 +152,7 @@ public class PhoneAuthenticationActivity extends AppCompatActivity {
                 Intent otpIntent = new Intent(PhoneAuthenticationActivity.this, OtpVerifyActivity.class);
                 otpIntent.putExtra("AuthCredentials", mVerificationId);
                 otpIntent.putExtra("PhoneNumber", phone);
+                otpIntent.putExtra("category",category);
                 startActivity(otpIntent);
                 finish();
             }

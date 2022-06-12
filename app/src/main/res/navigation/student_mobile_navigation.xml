@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/student_mobile_navigation"
+    app:startDestination="@+id/student_navigation_teachers">
+
+    <fragment
+        android:id="@+id/student_navigation_teachers"
+        android:name="com.edify.app.ui.teachersList.TeachersListFragment"
+        android:label="Teachers"
+        tools:layout="@layout/student_fragment_teachers" />
+
+    <fragment
+        android:id="@+id/student_navigation_profile"
+        android:name="com.edify.app.ui.studentProfile.StudentProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/student_fragment_profile" />
+
+    <fragment
+        android:id="@+id/student_navigation_signout"
+        android:name="com.edify.app.ui.studentSignOut.StudentSignOutFragment"
+        android:label="Sign Out"
+        tools:layout="@layout/student_fragment_signout" />
+</navigation>

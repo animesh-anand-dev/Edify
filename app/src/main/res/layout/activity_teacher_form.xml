@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TeacherFormActivity">
+    tools:context=".teachers.TeacherFormActivity">
 
     <TextView
         android:id="@+id/teach_form_title_1"
@@ -128,16 +128,16 @@
     <TextView
         android:id="@+id/teach_gender"
         android:layout_width="300dp"
-        android:layout_height="25dp"
+        android:layout_height="20dp"
         android:paddingLeft="10dp"
         android:text="Gender:-"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/teach_email_layout"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintTop_toBottomOf="@id/teach_dob_layout"
+        app:layout_constraintVertical_bias="0.089" />
 
     <RadioGroup
         android:id="@+id/teach_method_input"
@@ -202,12 +202,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
-        android:textStyle="bold"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teach_pincode_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/teach_pincode_layout"
+        app:layout_constraintVertical_bias="0.375" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

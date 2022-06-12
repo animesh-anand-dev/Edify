@@ -1,4 +1,4 @@
-package com.edify.app;
+package com.edify.app.authentication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.edify.app.CategorySelectionActivity;
+import com.edify.app.MainActivity;
+import com.edify.app.R;
+import com.edify.app.student.StudentFormActivity;
+import com.edify.app.teachers.TeacherFormActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
@@ -33,6 +38,7 @@ public class OtpVerifyActivity extends AppCompatActivity {
     private String mAuthVerificationId, phoneNum, deviceToken;
     private FirebaseUser mCurrentUser;
     private ProgressBar mProgressBarOtp;
+    private String category;
 
 
     @Override
@@ -40,7 +46,7 @@ public class OtpVerifyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_verify);
 
-       resend = (TextView) findViewById(R.id.otp_verify_resend);
+        resend = (TextView) findViewById(R.id.otp_verify_resend);
         otp = (TextInputEditText) findViewById(R.id.otp_verify_input);
         otp_verify = (Button) findViewById(R.id.otp_verify_button);
         mProgressBarOtp = (ProgressBar) findViewById(R.id.otp_verify_progressBar);
@@ -49,6 +55,8 @@ public class OtpVerifyActivity extends AppCompatActivity {
 
         mAuthVerificationId = getIntent().getStringExtra("AuthCredentials");
         phoneNum = getIntent().getStringExtra("PhoneNumber");
+        category = getIntent().getStringExtra("category");
+        Toast.makeText(OtpVerifyActivity.this, "You are selected " +category, Toast.LENGTH_SHORT).show();
 
         otp_verify.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +89,21 @@ public class OtpVerifyActivity extends AppCompatActivity {
                         FirebaseUser user = Objects.requireNonNull(task.getResult()).getUser();
                         String uid = Objects.requireNonNull(user).getUid();
                         final FirebaseFirestore db = FirebaseFirestore.getInstance();
-                        final DocumentReference docRef = db.collection("UsersList").document(uid);
+                        final DocumentReference docRef;
+
+                        if(category.equals("teacher")){
+                            docRef = db.collection("Teachers").document(uid);
+                        } else {
+                            docRef = db.collection("Students").document(uid);
+                        }
+
+                        if(category.equals("teacher")){
+                            Toast.makeText(OtpVerifyActivity.this, "You are selected teacher", Toast.LENGTH_SHORT).show();
+                        }
+                        if(category.equals("student")){
+                            Toast.makeText(OtpVerifyActivity.this, "You are selected student", Toast.LENGTH_SHORT).show();
+                        }
+
 
                         FirebaseInstallations.getInstance().getToken(true).addOnCompleteListener(task1 -> {
                             if (task1.isSuccessful()){
@@ -92,15 +114,29 @@ public class OtpVerifyActivity extends AppCompatActivity {
                         docRef.get().addOnSuccessListener(documentSnapshot -> {
                             if (documentSnapshot.exists()) {
                                 sendUserToMain();
-                            }else {
-                                Intent intent = new Intent(OtpVerifyActivity.this, CategorySelectionActivity.class);
-                                intent.putExtra("PHONENUMBER", phoneNum);
-                                intent.putExtra("UID", uid);
-                                intent.putExtra("TOKEN", deviceToken);
-                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                startActivity(intent);
-                                finish();
+                            }
+                            else {
+                                if (category.equals("student")) {
+                                    Intent intent = new Intent(OtpVerifyActivity.this, StudentFormActivity.class);
+                                    intent.putExtra("PHONENUMBER", phoneNum);
+                                    intent.putExtra("UID", uid);
+                                    intent.putExtra("TOKEN", deviceToken);
+                                    intent.putExtra("category", category);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Intent intent = new Intent(OtpVerifyActivity.this, TeacherFormActivity.class);
+                                    intent.putExtra("PHONENUMBER", phoneNum);
+                                    intent.putExtra("UID", uid);
+                                    intent.putExtra("TOKEN", deviceToken);
+                                    intent.putExtra("category", category);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(intent);
+                                    finish();
+                                }
                             }
 
                         });

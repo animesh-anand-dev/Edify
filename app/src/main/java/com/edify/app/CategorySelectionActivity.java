@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.edify.app.authentication.PhoneAuthenticationActivity;
+import com.edify.app.teachers.TeacherFormActivity;
+
 public class CategorySelectionActivity extends AppCompatActivity {
     CardView teacher, student;
 
@@ -20,20 +23,22 @@ public class CategorySelectionActivity extends AppCompatActivity {
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CategorySelectionActivity.this, TeacherFormActivity.class);
-                intent.putExtra("PHONENUMBER", getIntent().getStringExtra("PHONENUMBER"));
-                intent.putExtra("UID", getIntent().getStringExtra("UID"));
-                intent.putExtra("TOKEN", getIntent().getStringExtra("TOKEN"));
+                Intent intent = new Intent(CategorySelectionActivity.this, PhoneAuthenticationActivity.class);
+//                intent.putExtra("PHONENUMBER", getIntent().getStringExtra("PHONENUMBER"));
+//                intent.putExtra("UID", getIntent().getStringExtra("UID"));
+//                intent.putExtra("TOKEN", getIntent().getStringExtra("TOKEN"));
+                intent.putExtra("category","teacher");
                 startActivity(intent);
             }
         });
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CategorySelectionActivity.this, StudentFormActivity.class);
-                intent.putExtra("PHONENUMBER", getIntent().getStringExtra("PHONENUMBER"));
-                intent.putExtra("UID", getIntent().getStringExtra("UID"));
-                intent.putExtra("TOKEN", getIntent().getStringExtra("TOKEN"));
+                Intent intent = new Intent(CategorySelectionActivity.this, PhoneAuthenticationActivity.class);
+//                intent.putExtra("PHONENUMBER", getIntent().getStringExtra("PHONENUMBER"));
+//                intent.putExtra("UID", getIntent().getStringExtra("UID"));
+//                intent.putExtra("TOKEN", getIntent().getStringExtra("TOKEN"));
+                intent.putExtra("category","student");
                 startActivity(intent);
             }
         });

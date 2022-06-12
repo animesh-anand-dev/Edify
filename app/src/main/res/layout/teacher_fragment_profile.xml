@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.studentSignOut.StudentSignOutFragment">
-
+    tools:context=".ui.teacherProfile.TeacherProfileFragment">
 
     <TextView
-        android:id="@+id/std_your_profile"
+        android:id="@+id/teach_your_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -23,20 +22,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.074" />
-
+        app:layout_constraintVertical_bias="0.04" />
 
     <LinearLayout
-        android:id="@+id/std_profile_name"
+        android:id="@+id/teach_profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/std_your_profile"
-        app:layout_constraintVertical_bias="0.058">
+        app:layout_constraintTop_toBottomOf="@+id/teach_your_profile"
+        app:layout_constraintVertical_bias="0.062">
 
         <ImageView
             android:layout_width="50dp"
@@ -50,7 +48,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/std_profile_name_textView"
+                android:id="@+id/teach_profile_name_textView"
                 android:layout_width="200dp"
                 android:layout_height="20dp"
                 android:text="Name"
@@ -58,7 +56,7 @@
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/std_profile_name_input"
+                android:id="@+id/teach_profile_name_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:text=" Mansi Sinha"
@@ -68,16 +66,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/std_profile_mobile"
+        android:id="@+id/teach_profile_mobile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/std_profile_name"
-        app:layout_constraintVertical_bias="0.044">
+        app:layout_constraintTop_toBottomOf="@+id/teach_profile_name"
+        app:layout_constraintVertical_bias="0.058">
 
         <ImageView
             android:layout_width="50dp"
@@ -91,7 +89,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/std_profile_mobile_textView"
+                android:id="@+id/teach_profile_mobile_textView"
                 android:layout_width="200dp"
                 android:layout_height="20dp"
                 android:text="Mobile"
@@ -99,7 +97,7 @@
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/std_profile_mobileNumber"
+                android:id="@+id/teach_profile_mobileNumber"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:text="7759930452"
@@ -109,16 +107,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/std_profile_email"
+        android:id="@+id/teach_profile_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/std_profile_mobile"
-        app:layout_constraintVertical_bias="0.049">
+        app:layout_constraintTop_toBottomOf="@+id/teach_profile_mobile"
+        app:layout_constraintVertical_bias="0.058">
 
         <ImageView
             android:layout_width="50dp"
@@ -132,7 +130,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/std_profile_email_textView"
+                android:id="@+id/teach_profile_email_textView"
                 android:layout_width="200dp"
                 android:layout_height="20dp"
                 android:text="Email"
@@ -140,7 +138,7 @@
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/std_profile_email_input"
+                android:id="@+id/teach_profile_email_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:text="moturam1234@gmail.com"
@@ -150,16 +148,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/std_profile_gender"
+        android:id="@+id/teach_profile_gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/std_profile_email"
-        app:layout_constraintVertical_bias="0.057">
+        app:layout_constraintTop_toBottomOf="@+id/teach_profile_email"
+        app:layout_constraintVertical_bias="0.071">
 
         <ImageView
             android:layout_width="50dp"
@@ -173,7 +171,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/std_profile_gender_textView"
+                android:id="@+id/teach_profile_gender_textView"
                 android:layout_width="200dp"
                 android:layout_height="20dp"
                 android:text="Gender"
@@ -181,7 +179,7 @@
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/std_profile_gender_input"
+                android:id="@+id/teach_profile_gender_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:text="Female"
@@ -191,15 +189,15 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/std_profile_pinCode"
+        android:id="@+id/teach_profile_pinCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/std_profile_gender"
+        app:layout_constraintTop_toBottomOf="@+id/teach_profile_gender"
         app:layout_constraintVertical_bias="0.079">
 
         <ImageView
@@ -214,7 +212,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/std_profile_pinCode_textView"
+                android:id="@+id/teach_profile_pinCode_textView"
                 android:layout_width="200dp"
                 android:layout_height="20dp"
                 android:text="Pin Code"
@@ -222,7 +220,7 @@
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/std_profile_pinCode_input"
+                android:id="@+id/teach_profile_pinCode_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:text="834003"
@@ -232,57 +230,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/std_profile_class"
+        android:id="@+id/teach_profile_subject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/std_profile_pinCode"
-        app:layout_constraintVertical_bias="0.104">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/std" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/std_profile_class_textView"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
-                android:text="Class"
-                android:textSize="15sp"
-                android:textStyle="italic" />
-
-            <TextView
-                android:id="@+id/std_profile_class_input"
-                android:layout_width="200dp"
-                android:layout_height="30dp"
-                android:text="XII"
-                android:textColor="@color/black" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/std_profile_subject"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/std_profile_class"
-        app:layout_constraintVertical_bias="0.18">
+        app:layout_constraintTop_toBottomOf="@+id/teach_profile_pinCode"
+        app:layout_constraintVertical_bias="0.11">
 
         <ImageView
             android:layout_width="50dp"
@@ -296,7 +253,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/std_profile_subject_textView"
+                android:id="@+id/teach_profile_subject_textView"
                 android:layout_width="200dp"
                 android:layout_height="20dp"
                 android:text="Subject"
@@ -304,14 +261,54 @@
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/std_profile_subject_input"
+                android:id="@+id/teach_profile_subject_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
-                android:text="Maths"
+                android:text="Computer"
                 android:textColor="@color/black" />
         </LinearLayout>
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/teach_profile_qualification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teach_profile_subject"
+        app:layout_constraintVertical_bias="0.168">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_school_24" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/teach_profile_qualification_textView"
+                android:layout_width="200dp"
+                android:layout_height="20dp"
+                android:text="Qualification"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/teach_profile_qualification_input"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:text="MCA"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

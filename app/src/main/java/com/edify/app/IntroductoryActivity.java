@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.edify.app.onboarding.OnBoardingActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;

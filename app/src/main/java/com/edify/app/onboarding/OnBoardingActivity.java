@@ -1,4 +1,4 @@
-package com.edify.app;
+package com.edify.app.onboarding;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -11,6 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.edify.app.CategorySelectionActivity;
+import com.edify.app.R;
+import com.edify.app.authentication.PhoneAuthenticationActivity;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
@@ -52,7 +56,7 @@ public class OnBoardingActivity extends AppCompatActivity {
                 if (onboardingViewPager.getCurrentItem() + 1 < onboardingAdapter.getItemCount()) {
                     onboardingViewPager.setCurrentItem(onboardingViewPager.getCurrentItem() + 1);
                 } else {
-                    startActivity(new Intent(getApplicationContext(), PhoneAuthenticationActivity.class));
+                    startActivity(new Intent(getApplicationContext(), CategorySelectionActivity.class));
                     finish();
                 }
             }

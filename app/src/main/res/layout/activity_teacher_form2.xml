@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TeacherForm2Activity">
+    tools:context=".teachers.TeacherForm2Activity">
 
     <TextView
         android:id="@+id/teach_form_title_2"
@@ -157,12 +157,12 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/teach_profession_layout"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.027" />
 
     <RadioGroup
         android:id="@+id/teach_method_input"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:checkedButton="@+id/radio_button_1"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
@@ -191,31 +191,6 @@
             android:text="Online" />
     </RadioGroup>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/teach_about_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="About Yourself"
-        app:boxStrokeColor="@color/secondary_variant"
-        app:helperText="Required*"
-        app:helperTextTextColor="@color/secondary_variant"
-        app:hintTextColor="@color/secondary_variant"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/teach_method_input"
-        app:layout_constraintVertical_bias="0.102"
-        app:startIconDrawable="@drawable/about">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/teach_about_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
         android:id="@+id/teach_form_submit"
         android:layout_width="wrap_content"
@@ -226,8 +201,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teach_about_layout"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintTop_toBottomOf="@+id/teach_method_input"
+        app:layout_constraintVertical_bias="0.166" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

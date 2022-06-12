@@ -1,4 +1,4 @@
-package com.edify.app;
+package com.edify.app.student;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.edify.app.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class StudentForm2Activity extends AppCompatActivity {

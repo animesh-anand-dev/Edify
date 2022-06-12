@@ -1,4 +1,4 @@
-package com.edify.app;
+package com.edify.app.teachers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
+import com.edify.app.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class TeacherFormActivity extends AppCompatActivity {

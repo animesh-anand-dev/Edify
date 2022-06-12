@@ -13,22 +13,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Edify">
         <activity
-            android:name=".StudentForm3Activity"
+            android:name=".TeacherMainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_teacher_main" />
+        <activity
+            android:name=".StudentMainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_student_main" />
+        <activity
+            android:name=".student.StudentForm3Activity"
             android:exported="false" />
         <activity
-            android:name=".StudentForm2Activity"
+            android:name=".student.StudentForm2Activity"
             android:exported="false" />
         <activity
-            android:name=".TeacherForm2Activity"
+            android:name=".teachers.TeacherForm2Activity"
             android:exported="false" />
         <activity
-            android:name=".OtpVerifyActivity"
+            android:name=".authentication.OtpVerifyActivity"
             android:exported="false" />
         <activity
-            android:name=".PhoneAuthenticationActivity"
+            android:name=".authentication.PhoneAuthenticationActivity"
             android:exported="false" />
         <activity
-            android:name=".OnBoardingActivity"
+            android:name=".onboarding.OnBoardingActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -37,10 +45,10 @@
             android:name=".CategorySelectionActivity"
             android:exported="false" />
         <activity
-            android:name=".StudentFormActivity"
+            android:name=".student.StudentFormActivity"
             android:exported="false" />
         <activity
-            android:name=".TeacherFormActivity"
+            android:name=".teachers.TeacherFormActivity"
             android:exported="false" />
         <activity
             android:name=".IntroductoryActivity"

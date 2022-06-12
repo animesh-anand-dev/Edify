@@ -1,4 +1,4 @@
-package com.edify.app;
+package com.edify.app.student;
 
 import static android.content.ContentValues.TAG;
 
@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.edify.app.MainActivity;
+import com.edify.app.R;
+import com.edify.app.StudentMainActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
@@ -76,7 +79,7 @@ public class StudentForm3Activity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "submitted button clicked successfully", Toast.LENGTH_LONG).show();
 
 
-                db.collection("UsersList").document(uid).collection("student").document(phoneNum)
+                db.collection("Students").document(uid)
                         .set(userData)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -84,7 +87,7 @@ public class StudentForm3Activity extends AppCompatActivity {
 
                                 Log.d(TAG, "DocumentSnapshot successfully written!");
                                 Toast.makeText(getApplicationContext(), "Data submitted successfully", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                Intent intent = new Intent(getApplicationContext(), StudentMainActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
