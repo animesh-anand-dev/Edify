@@ -30,7 +30,6 @@ import java.util.List;
 
 public class StudentListFragment extends Fragment {
 
-
         private View view;
         private RecyclerView studentsRV;
         private ArrayList<Students> studentsArrayList ;

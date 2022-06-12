@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import com.edify.app.MainActivity;
 import com.edify.app.R;
+import com.edify.app.StudentMainActivity;
+import com.edify.app.TeacherMainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -30,6 +32,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.concurrent.TimeUnit;
 
@@ -195,11 +199,25 @@ public class PhoneAuthenticationActivity extends AppCompatActivity {
     }
 
     public void sendUserToMain() {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
-        finish();
+        String uid = mCurrentUser.getUid();
+        //Toast.makeText(getApplicationContext(),uid,Toast.LENGTH_LONG).show();
+        final FirebaseFirestore db = FirebaseFirestore.getInstance();
+        final DocumentReference docRefTeacher;
+        final DocumentReference docRefStudent;
+        docRefTeacher = db.collection("Teachers").document(uid);
+        //docRefStudent = db.collection("Students").document(uid);
+
+        docRefTeacher.get().addOnSuccessListener(documentSnapshot -> {
+            if (documentSnapshot.exists()) {
+                startActivity(new Intent(getApplicationContext(), TeacherMainActivity.class));
+                finish();
+            }
+            else
+            {
+                startActivity(new Intent(getApplicationContext(), StudentMainActivity.class));
+                finish();
+            }
+        });
     }
 
 }

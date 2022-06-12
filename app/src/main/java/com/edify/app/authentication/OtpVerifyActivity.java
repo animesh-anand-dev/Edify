@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.edify.app.CategorySelectionActivity;
 import com.edify.app.MainActivity;
 import com.edify.app.R;
+import com.edify.app.StudentMainActivity;
+import com.edify.app.TeacherMainActivity;
 import com.edify.app.student.StudentFormActivity;
 import com.edify.app.teachers.TeacherFormActivity;
 import com.google.android.material.textfield.TextInputEditText;
@@ -161,11 +163,25 @@ public class OtpVerifyActivity extends AppCompatActivity {
     }
 
     public void sendUserToMain() {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
-        finish();
+        String uid = mCurrentUser.getUid();
+        //Toast.makeText(getApplicationContext(),uid,Toast.LENGTH_LONG).show();
+        final FirebaseFirestore db = FirebaseFirestore.getInstance();
+        final DocumentReference docRefTeacher;
+        final DocumentReference docRefStudent;
+        docRefTeacher = db.collection("Teachers").document(uid);
+        //docRefStudent = db.collection("Students").document(uid);
+
+        docRefTeacher.get().addOnSuccessListener(documentSnapshot -> {
+            if (documentSnapshot.exists()) {
+                startActivity(new Intent(getApplicationContext(), TeacherMainActivity.class));
+                finish();
+            }
+            else
+            {
+                startActivity(new Intent(getApplicationContext(), StudentMainActivity.class));
+                finish();
+            }
+        });
     }
 
 }

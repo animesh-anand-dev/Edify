@@ -3,10 +3,14 @@ package com.edify.app;
 public class Students {
 
     private String studentName;
+    private String mobileNumber;
+    private String studentEmail;
+    private String studentPinCode;
     private String studentGender;
     private String studentClass;
     private String studentBoard;
     private String studentSubjects;
+
 
     public Students() {}
 
@@ -16,6 +20,30 @@ public class Students {
 
     public void setStudentName(String studentName) {
         this.studentName = studentName;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
+
+    public String getStudentEmail() {
+        return studentEmail;
+    }
+
+    public void setStudentEmail(String studentEmail) {
+        this.studentEmail = studentEmail;
+    }
+
+    public String getStudentPinCode() {
+        return studentPinCode;
+    }
+
+    public void setStudentPinCode(String studentPinCode) {
+        this.studentPinCode = studentPinCode;
     }
 
     public String getStudentClass() {
@@ -46,7 +74,8 @@ public class Students {
         return studentSubjects;
     }
 
-    public void setTeacherSubject(String teacherSubject) {
-        this.studentSubjects = teacherSubject;
+    public void setStudentSubjects(String studentSubjects) {
+        this.studentSubjects = studentSubjects;
     }
+
 }

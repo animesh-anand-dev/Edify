@@ -5,7 +5,9 @@ import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +27,7 @@ public class OnBoardingActivity extends AppCompatActivity {
     private OnboardingAdapter onboardingAdapter;
     private LinearLayout layoutOnboardingIndicator;
     private MaterialButton buttonOnboardingAction;
+    private String prevStarted = "yes";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +59,7 @@ public class OnBoardingActivity extends AppCompatActivity {
                 if (onboardingViewPager.getCurrentItem() + 1 < onboardingAdapter.getItemCount()) {
                     onboardingViewPager.setCurrentItem(onboardingViewPager.getCurrentItem() + 1);
                 } else {
-                    startActivity(new Intent(getApplicationContext(), CategorySelectionActivity.class));
+                    moveToSecondary();
                     finish();
                 }
             }
@@ -123,5 +126,21 @@ public class OnBoardingActivity extends AppCompatActivity {
 
     }
 
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+        if (!sharedpreferences.getBoolean(prevStarted, false)) {
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putBoolean(prevStarted, Boolean.TRUE);
+            editor.apply();
+        } else {
+            moveToSecondary();
+        }
+    }
+
+    public void moveToSecondary(){
+        // use an intent to travel from one activity to another.
+        startActivity(new Intent(getApplicationContext(), CategorySelectionActivity.class));
+    }
 
 }

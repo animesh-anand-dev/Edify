@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.edify.app.MainActivity;
 import com.edify.app.R;
+import com.edify.app.TeacherMainActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
@@ -79,7 +80,7 @@ public class TeacherForm2Activity extends AppCompatActivity {
 
                                 Log.d(TAG, "DocumentSnapshot successfully written!");
                                 Toast.makeText(getApplicationContext(), "Data submitted successfully", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                Intent intent = new Intent(getApplicationContext(), TeacherMainActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
