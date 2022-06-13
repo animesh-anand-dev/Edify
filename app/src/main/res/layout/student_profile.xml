@@ -15,6 +15,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="Your Profile"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -39,9 +40,10 @@
         app:layout_constraintVertical_bias="0.058">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_account_circle_24" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -80,9 +82,10 @@
         app:layout_constraintVertical_bias="0.044">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_phone_24" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_phone_24"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -121,9 +124,10 @@
         app:layout_constraintVertical_bias="0.049">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_email_24" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_email_24"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -162,9 +166,9 @@
         app:layout_constraintVertical_bias="0.057">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/sexual" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/gender" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -203,9 +207,10 @@
         app:layout_constraintVertical_bias="0.079">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/pincode" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/pincode"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -244,9 +249,10 @@
         app:layout_constraintVertical_bias="0.104">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/std" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/std"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -285,9 +291,10 @@
         app:layout_constraintVertical_bias="0.18">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_subject_24" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_subject_24"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"

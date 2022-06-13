@@ -14,6 +14,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="Your Profile"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -37,9 +38,10 @@
         app:layout_constraintVertical_bias="0.058">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_account_circle_24" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -60,7 +62,7 @@
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:textSize="20dp"
-                android:text="Mansi Sinha"
+                android:text=""
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -79,9 +81,10 @@
         app:layout_constraintVertical_bias="0.044">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_phone_24" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_phone_24"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -101,7 +104,7 @@
                 android:id="@+id/std_profile_mobileNumber"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
-                android:text="7759930452"
+                android:text=""
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -120,9 +123,10 @@
         app:layout_constraintVertical_bias="0.049">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_email_24" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_email_24"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -142,7 +146,7 @@
                 android:id="@+id/std_profile_email_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
-                android:text="moturam1234@gmail.com"
+                android:text=""
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -161,9 +165,10 @@
         app:layout_constraintVertical_bias="0.057">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/sexual" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/gender"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -183,7 +188,7 @@
                 android:id="@+id/std_profile_gender_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
-                android:text="Female"
+                android:text=""
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -202,9 +207,10 @@
         app:layout_constraintVertical_bias="0.079">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/pincode" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/pincode"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -224,7 +230,7 @@
                 android:id="@+id/std_profile_pinCode_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
-                android:text="834003"
+                android:text=""
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -243,9 +249,10 @@
         app:layout_constraintVertical_bias="0.104">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/std" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/std"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -265,7 +272,7 @@
                 android:id="@+id/std_profile_class_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
-                android:text="XII"
+                android:text=""
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -284,9 +291,10 @@
         app:layout_constraintVertical_bias="0.18">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_subject_24" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_subject_24"
+            android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -306,7 +314,7 @@
                 android:id="@+id/std_profile_subject_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
-                android:text="Maths"
+                android:text=""
                 android:textColor="@color/black" />
         </LinearLayout>
 

@@ -191,6 +191,31 @@
             android:text="Online" />
     </RadioGroup>
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/teach_fee_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Fee per hour"
+        app:startIconDrawable="@drawable/rupee"
+        app:boxStrokeColor="@color/secondary_variant"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/secondary_variant"
+        app:hintTextColor="@color/secondary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/teach_method_input"
+        app:layout_constraintVertical_bias="0.086">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/teach_fee_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/teach_form_submit"
         android:layout_width="wrap_content"
@@ -201,8 +226,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teach_method_input"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintTop_toBottomOf="@+id/teach_fee_layout"
+        app:layout_constraintVertical_bias="0.277" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
