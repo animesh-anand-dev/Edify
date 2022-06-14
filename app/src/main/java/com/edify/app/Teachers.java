@@ -10,6 +10,8 @@ public class Teachers {
     private String teacherProfession;
     private String teacherSubject;
     private String teacherPinCode;
+    private String teacherAddress;
+    private String teacherFeePerHour;
 
     public Teachers() {}
 
@@ -75,5 +77,21 @@ public class Teachers {
 
     public void setTeacherPinCode(String teacherPinCode) {
         this.teacherPinCode = teacherPinCode;
+    }
+
+    public String getTeacherAddress() {
+        return teacherAddress;
+    }
+
+    public void setTeacherAddress(String teacherAddress) {
+        this.teacherAddress = teacherAddress;
+    }
+
+    public String getTeacherFeePerHour() {
+        return teacherFeePerHour;
+    }
+
+    public void setTeacherFeePerHour(String teacherFeePerHour) {
+        this.teacherFeePerHour = teacherFeePerHour;
     }
 }

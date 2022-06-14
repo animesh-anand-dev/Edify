@@ -34,4 +34,10 @@ public class StudentMainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.studentNavView, navController);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
 }

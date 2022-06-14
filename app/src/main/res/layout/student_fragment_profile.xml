@@ -61,7 +61,7 @@
                 android:id="@+id/std_profile_name_input"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:text=""
                 android:textColor="@color/black" />
         </LinearLayout>
@@ -144,7 +144,7 @@
 
             <TextView
                 android:id="@+id/std_profile_email_input"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:text=""
                 android:textColor="@color/black" />

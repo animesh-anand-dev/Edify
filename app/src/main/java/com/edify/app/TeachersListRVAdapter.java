@@ -41,6 +41,8 @@ public class TeachersListRVAdapter extends RecyclerView.Adapter<TeachersListRVAd
         holder.teacherQualificationTV.setText(teachers.getTeacherQualification());
         holder.teacherProfessionTV.setText(teachers.getTeacherProfession());
         holder.teacherSubjectTV.setText(teachers.getTeacherSubject());
+        holder.teacherAddressTV.setText(teachers.getTeacherAddress());
+        holder.teacherFeeTV.setText(teachers.getTeacherFeePerHour());
 
         holder.callToTeacher.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +94,8 @@ public class TeachersListRVAdapter extends RecyclerView.Adapter<TeachersListRVAd
         private final TextView teacherQualificationTV;
         private final TextView teacherProfessionTV;
         private final TextView teacherSubjectTV;
+        private final TextView teacherAddressTV;
+        private final TextView teacherFeeTV;
         private final ImageView callToTeacher;
         private final ImageView smsToTeacher;
         private final ImageView emailToTeacher;
@@ -106,6 +110,8 @@ public class TeachersListRVAdapter extends RecyclerView.Adapter<TeachersListRVAd
                 teacherQualificationTV = itemView.findViewById(R.id.card_teacher_qualification);
                 teacherProfessionTV = itemView.findViewById(R.id.card_teacher_profession);
                 teacherSubjectTV = itemView.findViewById(R.id.card_teacher_subject_);
+                teacherAddressTV = itemView.findViewById(R.id.card_teacher_address);
+                teacherFeeTV = itemView.findViewById(R.id.card_teacher_fee);
                 callToTeacher = itemView.findViewById(R.id.card_teacher_call_button);
                 smsToTeacher = itemView.findViewById(R.id.card_teacher_sms_button);
                 emailToTeacher = itemView.findViewById(R.id.card_teacher_email_button);

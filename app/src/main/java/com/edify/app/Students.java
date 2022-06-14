@@ -10,6 +10,7 @@ public class Students {
     private String studentClass;
     private String studentBoard;
     private String studentSubjects;
+    private String studentAddress;
 
 
     public Students() {}
@@ -78,4 +79,11 @@ public class Students {
         this.studentSubjects = studentSubjects;
     }
 
+    public String getStudentAddress() {
+        return studentAddress;
+    }
+
+    public void setStudentAddress(String studentAddress) {
+        this.studentAddress = studentAddress;
+    }
 }

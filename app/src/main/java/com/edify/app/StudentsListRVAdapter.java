@@ -41,6 +41,7 @@ public class StudentsListRVAdapter extends RecyclerView.Adapter<StudentsListRVAd
         holder.studentClassTV.setText(students.getStudentClass());
         holder.studentBoardTV.setText(students.getStudentBoard());
         holder.studentSubjectsTV.setText(students.getStudentSubjects());
+        holder.studentAddressTV.setText(students.getStudentAddress());
 
         holder.callToStudent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +93,7 @@ public class StudentsListRVAdapter extends RecyclerView.Adapter<StudentsListRVAd
         private final TextView studentClassTV;
         private final TextView studentBoardTV;
         private final TextView studentSubjectsTV;
+        private final TextView studentAddressTV;
         private final ImageView callToStudent;
         private final ImageView smsToStudent;
         private final ImageView emailToStudent;
@@ -104,6 +106,7 @@ public class StudentsListRVAdapter extends RecyclerView.Adapter<StudentsListRVAd
             studentClassTV = itemView.findViewById(R.id.card_student_class);
             studentBoardTV = itemView.findViewById(R.id.card_student_board);
             studentSubjectsTV = itemView.findViewById(R.id.card_student_subject_);
+            studentAddressTV = itemView.findViewById(R.id.card_student_address);
             callToStudent = itemView.findViewById(R.id.card_student_call_button);
             smsToStudent = itemView.findViewById(R.id.card_student_sms_button);
             emailToStudent = itemView.findViewById(R.id.card_student_email_button);
